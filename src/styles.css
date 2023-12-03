@@ -1,0 +1,24 @@
+.addbtns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 75px;
+    height: 45px;
+}
+.item{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 40px;
+    margin-left: 10%;
+    box-shadow: 10px 10px 10px 10px grey;
+}
+.chk{
+    width: 30px;
+}
+#root{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}

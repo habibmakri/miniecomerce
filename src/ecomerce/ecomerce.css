@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'nunito';
+    /* Replace with your preferred font name */
+    src: url('../../NunitoSans_10pt-Light.ttf') format('truetype');
+    /* Provide the correct path to your .ttf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'nunito';
+}
+
+#root {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    gap: 4%;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+nav ul{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.alldisplay{
+    display: flex;
+    width: 100%;
+}
+
+.itemsspace {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px
+}
+
+.itemsspace .image {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 35px;
+    text-align: center;
+    height: 200px;
+    overflow: hidden;
+}
+
+.itemsspace .btns {
+    position: absolute;
+    top: 10px;
+    right: -65px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #e5ebf7;
+    width: 60px;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    opacity: 0;
+}
+
+.itemsspace .image:hover .btns {
+    transform: translateX(-75px);
+    transition: all 300ms;
+    opacity: 1;
+}
+
+.itemsspace .btns button {
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.addbtn{
+    background-color: #c0c0f0f7;
+    color: black;
+}
+.btns a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+    width: 50px;
+    height: 26px;
+    cursor: pointer;
+    padding-top: 7px;
+}
+
+
+.itemsspace>div img {
+    max-width: 100%;
+    height: 170px; 
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.itemsspace .image:hover img {
+    height: 190px;
+}
+
+.detail{
+    display: flex;
+    padding-top: 65px;
+    justify-content: space-around;
+}
+.detail .detailimage{
+    margin-left: 17%;
+    width: fit-content;
+}
+.detailimage img{
+    height: 400px; 
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.detail .details {
+    margin-left: 8%;
+}
+.detail .details h3{
+    font-size: 35px;
+    padding-left: 15%;
+    width: 65%;
+}
+.detailprice{
+    color: red;
+}
+.detaildescription{
+    width: 80%;
+    text-align: justify;
+}
+.detailaddbtn{
+    text-align: center;
+    font-size: 15px;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    border: none;
+    margin-left: 20px;
+}
+
+.delete,.payer{
+    cursor: pointer;
+}
+.panier{
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 1);
+}
+.panierheadercontainer{
+    padding-left: 15px;
+    font-size: 20px;
+    border-bottom: solid 1px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+.panier img{
+    height: 100px; 
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.panieritem {
+    display: flex;
+    margin: 7px;
+    padding-left: 3px;
+}
+.panierarea {
+    height: 75vh;
+    overflow-y: scroll;
+}
+.panieritem .infos{
+    margin-left: 10px;
+}
+.panierbottom{
+    width: 90%;
+    padding-bottom: 15px;
+    font-size: 20px;
+    border-top: solid 1px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+.controlpan{
+    display: flex;
+    padding-left: 15px;
+    font-size: 20px;
+    border-top: solid 1px;
+}
+.controlpan select{
+    border: none;
+    border-bottom: solid 1px;
+    margin-left: 2%;
+}
+
+.contctnumber{
+    margin-top: 30px; 
+    color: black;
+    margin-left: 25px;
+}
+
+
+.split-vue {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.split-vue h1 {
+    color: black;
+    font-size: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.split-vue p {
+    color: black;
+    font-size: 12px;
+    width: 300px;
+}
+
+.split-vue .s2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.split-vue .s2 input {
+    width: 777px;
+    height: 50px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    padding: 4px;
+    border: 1px solid black;
+    background: rgba(255, 254, 254, 0.86);
+}
+
+.split-vue .s2 textarea {
+    width: 777px;
+    height: 105px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    padding: 10px;
+    border: 1px solid black;
+    background: rgba(255, 254, 254, 0.86);
+}
+
+button {
+    color: black;
+    font-size: 21px;
+    border-radius: 4px;
+    opacity: 0.9;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
